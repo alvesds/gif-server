@@ -1,0 +1,19 @@
+{
+  "name": "image-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --inspect server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvesds/image-server.git"
+  },
+  "author": "alvesds",
+  "license": "ISC",
+  "homepage": "https://github.com/alvesds/image-server#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
