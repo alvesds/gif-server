@@ -1,7 +1,1 @@
 node_modules/
-
-public/assets/gifs/*
-!public/assets/gifs/empty
-
-public/assets/images/*
-!public/assets/images/empty

@@ -1,4 +1,6 @@
-const gifs = './public/assets/gifs';
+const path = require('path');
+const gifs = path.join(process.cwd()) + '/public/assets/gifs';
+
 const random = require('express').Router();
 const util = require('util');
 const fs = require('fs');
@@ -8,9 +10,9 @@ random.get('/', async (req, res) => {
     let files = await readdir(gifs);
     let file = files[Math.floor(Math.random() * files.length)];
 
-    if (file === 'empty') return res.status(400).json({ message: "Dear developer, the 'empty' file must be deleted :c" });
+    if (files.includes('empty')) return res.status(400).json({ message: "Dear developer, the 'empty' file must be deleted :c" });
 
-    return res.sendFile(gifs + '/' + file, { root: "./" });
+    return res.sendFile(gifs + '/' + file);
 });
 
 module.exports = random;
